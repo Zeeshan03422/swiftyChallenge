@@ -32,18 +32,21 @@ class ViewControllerViewModel: ViewControllerDelegate {
             case .success(let success):
                 do {
                     guard let object = try JSONSerialization.jsonObject(with: success) as? [String: Any] else {
-                    return
-                  }
-                    let model = (object["questions"] as? [[String:Any]])
-                    let data = model![0]
-                    var answers: [Answer] = []
-                    let answerArray = data["answers"] as! [[String:Any]]
-                    for answer in answerArray {
-                        answers.append(Answer(title: answer["title"] as! String, correct: answer["correct"] as! Bool))
+                        return
                     }
-                    let question = Question(query: data["query"] as! String, answers: answers)
-                    self.question = question
-                    self.delegate?.updateUI(question: question)
+                    if let model = object["questions"] as? [[String:Any]] {
+                        let data = model[0]
+                        var answers: [Answer] = []
+                        let answerArray = data["answers"] as! [[String:Any]]
+                        for answer in answerArray {
+                            answers.append(Answer(title: answer["title"] as! String, correct: answer["correct"] as! Bool))
+                        }
+                        let question = Question(query: data["query"] as! String, answers: answers)
+                        self.question = question
+                        self.delegate?.updateUI(question: question)
+                    } else {
+                        self.delegate?.show(error: "Invalid Json")
+                    }
                 } catch let error {
                     self.delegate?.show(error: error.localizedDescription)
                 }

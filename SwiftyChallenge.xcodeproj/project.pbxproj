@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		04568575284DEFDE00A80100 /* ViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04568574284DEFDE00A80100 /* ViewControllerViewModel.swift */; };
+		04568579284E107300A80100 /* ViewControllerViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04568578284E107300A80100 /* ViewControllerViewModelTest.swift */; };
+		0456857C284E137800A80100 /* MockViewControllerModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456857B284E137800A80100 /* MockViewControllerModelDelegate.swift */; };
+		0456857E284E142E00A80100 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456857D284E142E00A80100 /* MockNetworkService.swift */; };
+		04568580284E152400A80100 /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456857F284E152400A80100 /* JsonManager.swift */; };
+		04568584284E165B00A80100 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 04568583284E165B00A80100 /* success.json */; };
+		04568586284E193900A80100 /* invalidJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 04568585284E193900A80100 /* invalidJson.json */; };
 		F29D0D6924E1DD6500CCDB8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D0D6824E1DD6500CCDB8E /* AppDelegate.swift */; };
 		F29D0D6B24E1DD6500CCDB8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D0D6A24E1DD6500CCDB8E /* SceneDelegate.swift */; };
 		F29D0D6D24E1DD6500CCDB8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D0D6C24E1DD6500CCDB8E /* ViewController.swift */; };
@@ -31,6 +37,12 @@
 
 /* Begin PBXFileReference section */
 		04568574284DEFDE00A80100 /* ViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModel.swift; sourceTree = "<group>"; };
+		04568578284E107300A80100 /* ViewControllerViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModelTest.swift; sourceTree = "<group>"; };
+		0456857B284E137800A80100 /* MockViewControllerModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewControllerModelDelegate.swift; sourceTree = "<group>"; };
+		0456857D284E142E00A80100 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		0456857F284E152400A80100 /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
+		04568583284E165B00A80100 /* success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
+		04568585284E193900A80100 /* invalidJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = invalidJson.json; sourceTree = "<group>"; };
 		F29D0D6524E1DD6500CCDB8E /* SwiftyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29D0D6824E1DD6500CCDB8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F29D0D6A24E1DD6500CCDB8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0456857A284E135E00A80100 /* MocDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				0456857B284E137800A80100 /* MockViewControllerModelDelegate.swift */,
+			);
+			path = MocDelegates;
+			sourceTree = "<group>";
+		};
 		F29D0D5C24E1DD6500CCDB8E = {
 			isa = PBXGroup;
 			children = (
@@ -102,8 +122,14 @@
 		F29D0D7E24E1DD6900CCDB8E /* SwiftyChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				0456857A284E135E00A80100 /* MocDelegates */,
 				F29D0D8124E1DD6900CCDB8E /* Info.plist */,
 				F29D0D8D24E1E2DD00CCDB8E /* NetworkServiceTests.swift */,
+				04568578284E107300A80100 /* ViewControllerViewModelTest.swift */,
+				0456857D284E142E00A80100 /* MockNetworkService.swift */,
+				0456857F284E152400A80100 /* JsonManager.swift */,
+				04568583284E165B00A80100 /* success.json */,
+				04568585284E193900A80100 /* invalidJson.json */,
 			);
 			path = SwiftyChallengeTests;
 			sourceTree = "<group>";
@@ -215,6 +241,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04568584284E165B00A80100 /* success.json in Resources */,
+				04568586284E193900A80100 /* invalidJson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0456857E284E142E00A80100 /* MockNetworkService.swift in Sources */,
 				F29D0D8E24E1E2DD00CCDB8E /* NetworkServiceTests.swift in Sources */,
+				04568580284E152400A80100 /* JsonManager.swift in Sources */,
+				0456857C284E137800A80100 /* MockViewControllerModelDelegate.swift in Sources */,
+				04568579284E107300A80100 /* ViewControllerViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

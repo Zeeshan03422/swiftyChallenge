@@ -1,0 +1,51 @@
+
+
+{
+  "questions": [
+    {
+      "query": "We can return multiple values from a function using?",
+      "answers": [
+        { "correct": true, "title": "Tuple" },
+        { "correct": false, "title": "Array" },
+        { "correct": false, "title": "Both 1st & 2nd" },
+        { "correct": false, "title": "None" }
+      ]
+    },
+    {
+      "query": "Given : var stringValue:String = “Justin Gif”. What is the result of stringValue = nil?",
+      "answers": [
+        { "correct": false, "title": "stringValue == nil" },
+        { "correct": true, "title": "the compiler won't allow it" },
+        { "correct": false, "title": "stringValue == “Justin Gif”" },
+        { "correct": false, "title": "None" }
+      ]
+    },
+    {
+      "query": "What character is used to denote an Optional type",
+      "answers": [
+        { "correct": false, "title": "?" },
+        { "correct": false, "title": "!" },
+        { "correct": true, "title": "Both 1st & 2nd" },
+        { "correct": false, "title": "None" }
+      ]
+    },
+    {
+      "query": "How do you declare a mutable Integer array?",
+      "answers": [
+        { "correct": false, "title": "let arr = [Int]()" },
+        { "correct": true, "title": "var arr: [Int] = []" },
+        { "correct": false, "title": "var arr: [Int?]" },
+        { "correct": false, "title": "Both 2nd & 3rd" }
+      ]
+    },
+    {
+      "query": "What keywork do you use to not own a reference in Swift?",
+      "answers": [
+        { "correct": false, "title": "weak" },
+        { "correct": false, "title": "strong" },
+        { "correct": false, "title": "unowned" },
+        { "correct": true, "title": "Both 1st & 3rd" }
+      ]
+    }
+  ]
+}
