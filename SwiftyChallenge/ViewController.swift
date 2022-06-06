@@ -54,7 +54,7 @@ class ViewController: UIViewController {
             if button.element.isSelected {
                showMessage(isAnswerCorrect: viewModel.isAnswerCorrect(index: button.offset))
             }
-        }
+        }asdad
     }
     
     func showMessage(isAnswerCorrect: Bool) {
